@@ -1,9 +1,9 @@
 body{
-    background-image:url("background.png");
+    background-image:url("../images/background.png");
 }
 .header{
     height: 50px;
-    background-image:url("bannerbg.png ");
+    background-image:url("../images/bannerbg.png ");
     font-size: 8px;
     margin-top:0px;
     padding-top: 0px;
@@ -43,7 +43,7 @@ body{
 }
 .review-header{
     height: 83px;
-    background-image:url("rbg.png") ;
+    background-image:url("../images/rbg.png") ;
     font-size:48pt;
     color: red;
     font-weight: bold;
