@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--<title> Sign up Application Form </title>-->
+        <meta charset="UTF-8">
+        <link href="./style/signup.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <form action="signup.html" style="border:1px solid #ccc">
+            <div class="container">
+                <!--<h1>Sign Up</h1>-->
+                <!--<p>Please fill in this form to create an account.</p>-->
+                <!--<hr>-->
+                <fieldset>
+                    <legend>New User SignUp:</legend>
+                    <label> Name <input type="text" placeholder="Enter Name" name="name" maxlength="16" required></label>
+                    <br>
+                    <label> Gender 
+                        <input type="radio" name="gender" value="male"/> Male
+                        <input type="radio" name="gender" value="female" checked="checked"/> Female
+                    </label> <br>
+                    <label> Age <input type="text" placeholder="Enter your age" name="name"  size="6" maxlength="4" required ></label> <br>
+                    <label> Personality Type <input type="text" placeholder="Enter Name" name="name" size="6" maxlength="4" required> 
+                        <strong>(do not know your type) </strong>
+                    </label>    <br>
+                    <label> Favorite OS Type 
+                        <select name="favoritecharacter">
+                            <option selected="">Windows</option>
+                            <option>Mac OS X</option>
+                            <option >Linux</option>
+                        </select> <br>
+                        <label> Seeking age
+                            <input type="text" placeholder="min" name="min" size="6"  maxlength="2" required> to
+                            <input type="text" placeholder="max" name="max" size="6"  maxlength="2"  required>
+                        </label> <br>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                </fieldset>
+            </div>
+        </form>
+    </body>
+</html>
