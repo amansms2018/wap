@@ -1,0 +1,87 @@
+* {box-sizing: border-box}
+
+ Full-width input fields 
+  input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input
+{
+  background-color: #ddd;
+  outline: none;
+  padding-left: 10px;
+ vertical-align: middle;
+}label{
+}
+
+
+ Set a style for all buttons 
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+button{
+    background-color:palevioletred;
+    font-weight: bold;
+    font: 20pt;
+}
+fieldset{
+    border: none;
+}
+form{
+   background-color:pink; 
+   width: 40%;
+  border-bottom: 5px solid red;
+   border-right:  5px solid red;
+       
+}
+strong{
+    color: red;
+}
+
+ Float signup buttons and add an equal width 
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+ Add padding to container elements 
+.container {
+  padding: 16px;
+}
+
+ Clear floats 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+   margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}*/
+
+
