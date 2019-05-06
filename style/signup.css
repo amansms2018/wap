@@ -42,7 +42,7 @@ fieldset{
 form{
    background-color:pink; 
    width: 40%;
-  border-bottom: 5px solid red;
+   border-bottom: 5px solid red;
    border-right:  5px solid red;
        
 }
@@ -73,15 +73,6 @@ strong{
   transform: translateY(-50%);
 }
 
-/*.container { 
-  height: 200px;
-  position: relative;
-  border: 3px solid green; 
-   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}*/
+
 
 
