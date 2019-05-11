@@ -2,14 +2,17 @@
 
  Full-width input fields 
   input[type=text] {
-  width: 100%;
+  width: 40%;height: 40%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
 }
+fieldset{
+    width: 40px;
 
+}
 input
 {
   background-color: #ddd;
@@ -72,6 +75,7 @@ strong{
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 
 
 
