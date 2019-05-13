@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Decorator</title>
+	<link href="decoratemytext.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="decoratemytext.js">
+	</script>
+	<!-- link to your script file here -->
+	<script>
+		function changeTextArea(element) {
+			var bc= document.body.style.backgroundImage;
+			if (element.checked) {
+				document.getElementById("ta").disabled = true;
+				document.getElementById("ta").style.fontWeight = "bold";
+				document.getElementById("ta").style.color = "green";
+				document.getElementById("ta").style.textDecoration = "underline";
+				document.body.style.backgroundImage = "url('hundred-dollar-bill.jpg')";
+
+			}
+			else{
+				document.getElementById("ta").disabled = false;
+				document.getElementById("ta").style.fontWeight = "normal";
+				document.getElementById("ta").style.color = "black";
+				document.getElementById("ta").style.textDecoration = "none";
+				document.body.style.backgroundImage = "url(" + bc + ")";
+			}
+		}
+		</script>
+
+
+</head>
+
+<body>
+<h1>Text Decorator</h1>
+
+<div>
+	<img src="decorated.gif" alt="very decorated!" />
+</div>
+<!-- Your UI controls go here -->
+<br>
+<label> My Text Area
+	<br>
+	<textarea id="ta" rows="4" cols="30">
+			</textarea>
+</label>
+<br> <br>
+
+<fieldset>
+	<legend>  Decoration</legend>
+	<button id="BiggerDecoration"> Bigger Decorations! </button>
+	<br><br>
+	<script>
+		document.getElementById("BiggerDecoration").onclick=delayMesg2;
+		// window.onload= function(){
+		// 	document.getElementById("BiggerDecoration").onclick=BiggerFont;};
+		//
+		// // function BiggerFont() {
+		// // 	document.getElementById("BiggerDecoration").style.fontSize  = 24+"pt";
+		// // }
+
+		var timer= null;
+		function delayMesg2() {
+			if (timer===null){
+				timer= setInterval(BiggerFont, 500);
+			}
+			else
+			{
+				clearInterval(timer);
+				timer= null;
+			}
+			function BiggerFont() {
+				var newFontSize= parseInt(document.getElementById("ta").style.fontSize);
+				newFontSize= newFontSize + 8;
+				document.getElementById("BiggerDecoration").style.fontSize = newFontSize +"pt";
+				document.getElementById("BiggerDecoration").innerHTML+= newFontSize;
+			}
+		}
+	</script>
+	<label> <input type="checkbox" value="check" id="blink" onchange = "changeTextArea(this)"/> Blink</label>
+</fieldset>
+</fieldset>
+
+
+</body>
+</html>
