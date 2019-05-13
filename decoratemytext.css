@@ -19,10 +19,6 @@ textarea {
     font-family: monospace;
     font-size: 12pt;
     border-style: solid;
-    /*margin-bottom:50px;*/
-    /*margin-top: 50px;*/
-    /*margin-left: 50px;*/
-
 }
 fieldset {
     border-top:darkgray 1px;
@@ -40,6 +36,6 @@ legend {
   }
 
 button {
-    height: 30px;
+    /*height: 30px;*/
     width:40%;
 }

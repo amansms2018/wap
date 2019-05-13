@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="decoratemytext.js">
 	</script>
 	<!-- link to your script file here -->
+
 	<script>
 		function changeTextArea(element) {
 			var bc= document.body.style.backgroundImage;
@@ -15,14 +16,14 @@
 				document.getElementById("ta").style.color = "green";
 				document.getElementById("ta").style.textDecoration = "underline";
 				document.body.style.backgroundImage = "url('hundred-dollar-bill.jpg')";
-
 			}
 			else{
 				document.getElementById("ta").disabled = false;
 				document.getElementById("ta").style.fontWeight = "normal";
 				document.getElementById("ta").style.color = "black";
 				document.getElementById("ta").style.textDecoration = "none";
-				document.body.style.backgroundImage = "url(" + bc + ")";
+				document.body.style.backgroundImage="none";
+
 			}
 		}
 		</script>
@@ -46,11 +47,11 @@
 <br> <br>
 
 <fieldset>
-	<legend>  Decoration</legend>
+	<legend>Decoration</legend>
 	<button id="BiggerDecoration"> Bigger Decorations! </button>
 	<br><br>
 	<script>
-		document.getElementById("BiggerDecoration").onclick=delayMesg2;
+		document.getElementById("BiggerDecoration").onclick=delayMesg;
 		// window.onload= function(){
 		// 	document.getElementById("BiggerDecoration").onclick=BiggerFont;};
 		//
@@ -59,20 +60,25 @@
 		// // }
 
 		var timer= null;
-		function delayMesg2() {
+		function delayMesg() {
 			if (timer===null){
-				timer= setInterval(BiggerFont, 500);
+				timer= setInterval(BiggerFont,500);
 			}
 			else
 			{
 				clearInterval(timer);
 				timer= null;
 			}
-			function BiggerFont() {
-				var newFontSize= parseInt(document.getElementById("ta").style.fontSize);
-				newFontSize= newFontSize + 8;
-				document.getElementById("BiggerDecoration").style.fontSize = newFontSize +"pt";
-				document.getElementById("BiggerDecoration").innerHTML+= newFontSize;
+		function BiggerFont() {
+			var el = document.getElementById('ta');
+			var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+			var fontSize = parseFloat(style);
+			document.getElementById("BiggerDecoration").style.fontSize=(fontSize + 2) + 'px';
+
+			 // var newFontSize= parseInt(document.getElementById("ta").style.fontSize);
+				// newFontSize= newFontSize + 2;
+				// document.getElementById("BiggerDecoration").style.fontSize = newFontSize +"pt";
+				// //document.getElementById("BiggerDecoration").innerHTML+= newFontSize;
 			}
 		}
 	</script>
