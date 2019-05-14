@@ -9,10 +9,7 @@
   border: none;
   background: #f1f1f1;
 }
-fieldset{
-    width: 40px;
 
-}
 input
 {
   background-color: #ddd;
@@ -22,8 +19,7 @@ input
 }label{
 }
 
-
- Set a style for all buttons 
+ Set a style for all buttons
 button {
   background-color: #4CAF50;
   color: white;
@@ -37,17 +33,23 @@ button {
 button{
     background-color:palevioletred;
     font-weight: bold;
-    font: 20pt;
+    font-size: 12pt;
 }
 fieldset{
-    border: none;
+
+    /*width: 60%;*/
+
 }
 form{
-   background-color:pink; 
+    margin-top: 50px;
    width: 40%;
-   border-bottom: 5px solid red;
-   border-right:  5px solid red;
-       
+    border-style:solid;
+   /*border-bottom: 5px solid red;*/
+   /*border-right:  5px solid red;*/
+    border-color:gray;
+    text-align: left;
+    background-color:pink;
+    border-style:solid;
 }
 strong{
     color: red;
