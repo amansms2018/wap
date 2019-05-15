@@ -26,7 +26,7 @@ function display(index1) {
 }
 function stopAnimation (){
     delayTime= null;
-    alert("new alte time" + delayTime);
+    // alert("new alte time" + delayTime);
     changeButtonStatu2();
     document.getElementById("ta").innerHTML =currAnimation;
     changeButtonStatus(stop);
