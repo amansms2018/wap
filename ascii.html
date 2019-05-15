@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>CS472: ASCII Animation Viewer</title>-->
+    <link href=" ascii.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/animations.js"></script>
+    <script type="text/javascript" src="./js/ascii.js"></script>
+</head>
+<body>
+
+<h1> CSE 190 M ASCII Animation Viewer </h1>
+<div align="center">
+    <textarea id="ta"cols="80" rows="20"></textarea>
+</div>
+<br>
+
+<div align="center">
+<fieldset>
+    <legend> play Controls </legend>
+    <button  id= "start" type="button" onclick="startAnimation()"> Start</button>
+    <button  id= "stop" type="button" onclick="stopAnimation()" disabled="true"> Stop</button>
+</fieldset>
+<fieldset>
+    <legend> Animation </legend>
+    <select id="animationType" onchange="myFunctionForAnimation()">
+        <option selected value="BLANK"> BLANK</option>
+        <option value="EXERCISE"> EXERCISE</option>
+        <option value="JUGGLER"> JUGGLER</option>
+        <option value="BIKE"> BIKE</option>
+        <option value="DIVE"> DIVE</option>
+        <option value="CUSTOM"> CUSTOM</option>
+    </select>
+</fieldset>
+
+<fieldset>
+
+    <legend> Size </legend>
+    <select id="fontSize" onchange="changeFontSize()">
+        <option value="7pt"> Tiny </option>
+        <option value="10pt" > Small </option>
+        <option value="12pt" selected> Medium</option>
+        <option value="16pt"> Large</option>
+        <option value="24pt"> Extra Large</option>
+        <option value="32pt"> XXL</option>
+    </select>
+</fieldset>
+
+<fieldset>
+    <legend> Speed </legend>
+     <label> <input  id= "speed" type="checkbox" onclick="changeTurboSpeed()"> Turbo </label>
+</fieldset>
+</div>
+<div class="validator">
+    <a href="http://validator.w3.org/check/referer"><img src="./images/w3c-html.png" alt="Valid HTML5" /></a> <br />
+    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="./images/w3c-css.png" alt="Valid CSS" /></a>
+    <BR>
+    <a href="https://webster.cs.washington.edu/jslint/?referer">
+        <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+    </a>
+</div>
+
+</body>
+</html>
