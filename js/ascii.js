@@ -1,23 +1,20 @@
 
 var currAnimation;
-var delayTime =250;
-var myframe;
+var delayTime = null;
+var myframe= null;
 var index1=0;
-
+var delayTime=250;
 
 document.getElementById("stop").disabled = true;
 
 function startAnimation() {
     myframe = currAnimation.split("=====");
     changeButtonStatu1();
-    if (delayTime!==null) {
-    setInterval(display, delayTime, index1);}
-    else {
-        myStopFunction();
-    }
+    if (this.delayTime!==null) {
+    setInterval(display, this.delayTime, index1);}
+
 }
 function display(index1) {
-    // alert(delayTime);
     if (this.index1 >=myframe.length){
         this.index1=0;
     }
@@ -25,16 +22,21 @@ function display(index1) {
     this.index1+=1;
 }
 function stopAnimation (){
-    delayTime= null;
-    // alert("new alte time" + delayTime);
+    myframe= null;
+    this.delayTime= null;
+    myStopFunction();
+    alert("new alte time" + delayTime);
     changeButtonStatu2();
     document.getElementById("ta").innerHTML =currAnimation;
     changeButtonStatus(stop);
-    alert(" the current  annimation" + currAnimation);
 }
 
 function myStopFunction() {
-    clearInterval(delayTime);
+    if (this.delayTime!=null) return this.delayTime;
+    else {
+       return clearInterval(this.delayTime);
+    }
+
 }
 function myFunctionForAnimation() {
     var whichOne = document.getElementById("animationType").value;
