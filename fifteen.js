@@ -38,27 +38,23 @@ function getBoxPosition (i) {
     };
     /////////////////////////////////////////////////////////////
  function move (piece, newPosition) {
-        //get current position of piece
         let currentPosition = getBoxIndex(piece);
-        //check if this piece can move to empty square position
         if (checkMove(currentPosition, emptySquarePosition) === false) return false;
         //Tracking
         if (autoPlayStatus === false) {
             let moveStatus = new MoveStatus(piece, currentPosition, newPosition);
             arrMoveStatus.push(moveStatus);
         }
-        //store current position to emptySquarePosition
         emptySquarePosition = currentPosition;
         console.log(emptySquarePosition);
-        //move to new position
         setPosition(piece, newPosition);
     };
     /////////////////////////////////////////////////////////////
  function showMessage (msg) {
         $("#status").text(msg).css('color', 'red');
     };
-    /////////////////////////////////////////////////////////////
 
+    /////////////////////////////////////////////////////////////
     function cellIndex (position) {
         let c = {};
         c.i = position % COLS;
