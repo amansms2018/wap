@@ -1,12 +1,10 @@
-var puzze = (function () {
+var puzzeModule = (function ()  {
     var nRow = 0;
     var nPieces = 0;
     const COLS = 4;
-
     const MAX = 9999;
     const TIME_OUT = 1500;
     var autoPlayStatus = false;
-    //0: Move down, 1: Move left, 2: Move up, 3: Move right
     const MOVE = [{i: 0, j: 1}, {i: -1, j: 0}, {i: 0, j: -1}, {i: 1, j: 0}];
     var emptySquarePosition = 15;
     const NUM_STEPS = 50;
